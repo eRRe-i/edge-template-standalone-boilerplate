@@ -13,7 +13,8 @@
 </head>
 
 <body class="h-full">
-    <!--
+    <div class="min-h-full">
+        <!--
 
   ~~ checkpoints
     
@@ -44,29 +45,30 @@
   <body class="h-full">
 
 -->
-    {{--
-    id: 0,
-    username: 'leandro',
-    name: 'Leandro Bataglia',
-    email: 'leandro@bataglia.com',
-    job: 'Software Developer',
-    city: 'Rio de Janeiro',
-    state: 'RJ',
-    isAdmin: true,
-    avatarUrl:
-    'https://media.licdn.com/dms/image/D4D03AQFfixZ5KEoO_A/profile-displayphoto-shrink_800_800/0/1664401860599?e=1683763200&v=beta&t=mKDv3KdOmOcUKiT5KXMSsb57Gca6AfcvFB8IN0rMPkM',
-    --}}
+        {{--
+        id: 0,
+        username: 'leandro',
+        name: 'Leandro Bataglia',
+        email: 'leandro@bataglia.com',
+        job: 'Software Developer',
+        city: 'Rio de Janeiro',
+        state: 'RJ',
+        isAdmin: true,
+        avatarUrl: ./leandro.jpg,
+        --}}
 
-    <div class="min-h-full">
 
+        {{--
         @!component('components/base', {
         name: loggedUser.name,
         job: loggedUser.job,
         city: loggedUser.city,
         estado: loggedUser.estado,
         avatarUrl: loggedUser.avatarUrl
-        })
+        }) --}}
 
+
+        @!component('components/base', ({...loggedUser}))
 
         <main class="MAIN bg-white rounded-md mx-5 py-3">
 
