@@ -1,0 +1,1 @@
+# edge-template-standalon-boilerplate
