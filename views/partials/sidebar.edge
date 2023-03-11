@@ -1,4 +1,4 @@
-<div x-data="{ open: true }">
+<div x-data="$store.sidebar">
     <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
     <div class="SIDEBAR--mobile relative z-40 lg:hidden" role="dialog" aria-modal="true">
         <!--
@@ -11,14 +11,14 @@
           From: "opacity-100"
           To: "opacity-0"
       -->
-        <div class="fixed inset-0 bg-gray-700 bg-opacity-75" x-show="!open"
+        <div class="fixed inset-0 bg-gray-700 bg-opacity-75" x-show="$store.sidebar.open"
             x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0"
             x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-300"
             x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
 
         </div>
 
-        <div class="fixed inset-0 z-40 flex transition ease-in-out duration-300 transform" x-show="!open"
+        <div class="fixed inset-0 z-40 flex transition ease-in-out duration-300 transform" x-show="$store.sidebar.open"
             x-transition:enter="transition ease-out duration-300" x-transition:enter-start="-translate-x-full"
             x-transition:enter-end="translate-x-0" x-transition:leave="transition ease-in duration-300"
             x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full">
@@ -44,7 +44,7 @@
               To: "opacity-0"
           -->
                 <div class="absolute top-0 right-0 -mr-12 pt-2">
-                    <button type="button" x-on:click="open = ! open"
+                    <button type="button" x-on:click="$store.sidebar.toggle()"
                         class="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                         <span class="sr-only">Close sidebar</span>
                         <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -272,111 +272,4 @@
             </nav>
         </div>
     </div> <!-- SIDEBAR--desktop -->
-
-
-    <div class="CONTENT relative flex flex-col lg:pl-64 mx-2">
-        <div class="HEADER">
-            <div class="HEADER--TOPBAR flex h-16 flex-shrink-0 border-b border-gray-200 bg-white lg:border-none">
-                <div class="h-44 pt-3 w-full rounded lg:h-48 bg-gradient-to-r from-cyan-800 to-sky-600">
-                    <button type="button" x-on:click="open = ! open"
-                        class="px-4 text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-slate-500 lg:hidden">
-                        <span class="sr-only">Open sidebar</span>
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                            aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5" />
-                        </svg>
-                    </button>
-
-                    <div class="flex flex-1 justify-between sm:px-2 lg:mx-auto lg:max-w-6xl">
-                        <div class="flex-1">
-                            <!-- BREADCRUMBS? -->
-                            <!-- Search bar -->
-                        </div>
-                        <div class="ml-4 flex items-center md:ml-6">
-                            <button type="button"
-                                class="rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2">
-                                <span class="sr-only">View notifications</span>
-                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                    stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
-                                </svg>
-                            </button>
-
-                            <!-- Profile dropdown -->
-                            <div class="relative ml-3">
-                                <div>
-                                    <button type="button"
-                                        class="flex max-w-xs items-center rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 lg:rounded-md lg:p-2 lg:hover:bg-gray-50"
-                                        id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                                        <img class="h-8 w-8 rounded-full" src={{ avatarUrl }} alt="">
-                                        <span class="ml-3 hidden text-sm font-medium text-gray-600 lg:block"><span
-                                                class="sr-only">Open user menu for </span>{{ name
-                                            }}</span>
-                                        <svg class="ml-1 hidden h-5 w-5 flex-shrink-0 text-gray-400 lg:block"
-                                            viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                            <path fill-rule="evenodd"
-                                                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                                                clip-rule="evenodd" />
-                                        </svg>
-                                    </button>
-                                </div>
-
-                                <!--
-                                            Dropdown menu, show/hide based on menu state.
-                            
-                                            Entering: "transition ease-out duration-100"
-                                            From: "transform opacity-0 scale-95"
-                                            To: "transform opacity-100 scale-100"
-                                            Leaving: "transition ease-in duration-75"
-                                            From: "transform opacity-100 scale-100"
-                                            To: "transform opacity-0 scale-95"
-                                        -->
-                                <div class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                                    role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button"
-                                    tabindex="-1">
-                                    <!-- Active: "bg-gray-100", Not Active: "" -->
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-600" role="menuitem"
-                                        tabindex="-1" id="user-menu-item-0">Your Profile</a>
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-600" role="menuitem"
-                                        tabindex="-1" id="user-menu-item-1">Settings</a>
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-600" role="menuitem"
-                                        tabindex="-1" id="user-menu-item-2">Logout</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- HEADER -->
-
-        <div class="PROFILE px-5 pb-4 pt-10">
-            <div class="overflow-hidden rounded-lg bg-white shadow">
-                <h2 class="sr-only" id="profile-overview-title">Profile Overview</h2>
-                <div class="bg-white p-6">
-                    <div class="sm:flex sm:items-center sm:justify-between">
-                        <div class="sm:flex sm:space-x-5">
-                            <div class="flex-shrink-0">
-                                <img class="mx-auto h-20 w-20 rounded-full" src={{ avatarUrl }} alt="">
-                            </div>
-                            <div class="mt-4 flex flex-col justify-center text-center sm:mt-0 sm:pt-1 sm:text-left">
-                                <p class="text-xl font-bold text-gray-900 sm:text-2xl">{{ name }}</p>
-                                <p class="text-sm font-medium text-gray-600">{{ job }}</p>
-                                <span class="pt-1 flex items-center justify-start">
-                                    <p class="underline"> {{ city }} / {{ estado }} </p>
-                                    <ion-icon class="text-xl" name="location-outline"></ion-icon>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="mt-5 flex justify-center sm:mt-0">
-                            <a href="#"
-                                class="flex items-center justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">Editar
-                                perfil</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- PROFILE -->
-    </div>
 </div>

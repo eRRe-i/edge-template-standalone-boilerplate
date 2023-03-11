@@ -20,11 +20,11 @@ createServer(async (_req, res) => {
                 loggedUser: loggedUser,
             })
         )
-    } else if (reqUrl === "/loggeduser") {
+    } else if (reqUrl === "/logged-user") {
         res.writeHead(200, { 'content-type': 'text/html' })
 
         res.end(
-            await edge.render('userRender', {
+            await edge.render('logged-user', {
                 loggedUser: loggedUser,
             })
         )

@@ -1,0 +1,96 @@
+<!doctype html>
+<html class="h-full bg-gray-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+        Alpine.store('sidebar', {
+            open: false,
+ 
+            toggle() {
+                this.open = ! this.open
+            }
+        })
+    })
+    </script>
+</head>
+
+<body class="h-full">
+    <div class="min-h-full">
+        <!--
+
+  ~~ checkpoints
+    
+    SIDEBAR--mobile
+    SIDEBAR--desktop
+
+    CONTENT
+    ~ HEADER
+        ~ TOPBAR
+        ~ PROFILE--desktop
+        ~ PROFILE--mobile
+    
+  tailwind config
+
+// @layout/forms precisa estar habilitado
+  tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+
+  ~~ atualização do template
+
+-->
+        {{--
+        id: 0,
+        username: 'leandro',
+        name: 'Leandro Bataglia',
+        email: 'leandro@bataglia.com',
+        job: 'Software Developer',
+        city: 'Rio de Janeiro',
+        state: 'RJ',
+        isAdmin: true,
+        avatarUrl: ./leandro.jpg,
+        --}}
+
+        <div x-data="{open: $store.sidebar.open}">
+
+            @include('partials/sidebar')
+
+            <div class="CONTENT relative flex flex-col lg:pl-64 mx-2">
+
+                @!component('components/header/topbar', {
+                loggedUser : ({...loggedUser})
+                })
+
+                @!component('components/header/profile-card', {
+                loggedUser : ({...loggedUser})
+                })
+
+            </div>
+        </div>
+
+        @!section('content')
+
+    </div>
+</body>
+
+
+
+
+
+</html>
