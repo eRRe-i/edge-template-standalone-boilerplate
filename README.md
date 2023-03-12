@@ -23,9 +23,10 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 <!-- [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url] -->
-[![LinkedIn][linkedin-shield]][linkedin-url]
+
 
 
 
@@ -93,7 +94,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [![Adonis][AdonisJS]][Adonis-url]
+* [![Adonis][AdonisJS]][AdonisJS-url]
 * [![Node][Node.js]][Node-url]
 * [![TS][TypeScript]][TypeScript-url]
 * [![Tailwind][TailwindCSS]][Tailwind-url]
