@@ -85,7 +85,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The project was made to support the Frontend development of the UFRRJ's Alumni system. Details about this project can be seen here. 
+The project was made to support the Frontend development of the UFRRJ's Alumni system. Details about this project can be seen here.
+
+It used the HTTP module to create the server and setup the modules. It also uses TailwindCSS and Alpine 
 
 <p align="right">[<a href="#readme-top">back to top</a>]</p>
 
@@ -97,6 +99,7 @@ The project was made to support the Frontend development of the UFRRJ's Alumni s
 * [![Adonis][AdonisJS]][AdonisJS-url]
 * [![Node][Node.js]][Node-url]
 * [![TS][TypeScript]][TypeScript-url]
+* [![Alpine][Alpine.js]][Alpine-url]
 
 
 <p align="right">[<a href="#readme-top">back to top</a>]</p>
@@ -239,9 +242,10 @@ edge-template-standalone-boilerplate
 [Tailwind-url]: https://tailwindcss.com/docs/installation
 [Node.js]: https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white
 [Node-url]: https://nodejs.org/en/
-
 [TypeScript]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
 [TypeScript-url]: https://www.typescriptlang.org/
+[Alpine.js]: https://img.shields.io/badge/v1?style=for-the-badge&message=Alpine.js&color=222222&logo=Alpine.js&logoColor=8BC0D0&label=
+[Alpine-url]: https://alpinejs.dev/
 
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
