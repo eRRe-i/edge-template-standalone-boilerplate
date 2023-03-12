@@ -41,6 +41,7 @@
 
   <p align="center">
     Edge is the official template for the AdonisJs framework. Although it is build on top of the AdonisJS framework, it is agonstic and can be used standalone as well.
+    <br>
     This is a boilerplate project where you can build you Frontend logic and interactions. You may find it useful to implement and test your templates here before shipping it to the actual project.
     <!-- <br />
     <a href="https://github.com/eRRe-i/edge-template-standalone-boilerplate"><strong>Explore the docs »</strong></a> -->
@@ -60,9 +61,8 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-        <a href="#built-with">Built With</a>
-    </li>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#built-with">Built With</a></li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
@@ -84,23 +84,21 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+The project was made to support the Frontend development of the UFRRJ's Alumni system. Details about this project can be seen here. 
 
 <p align="right">[<a href="#readme-top">back to top</a>]</p>
 
 
 
-### Built With
+## Built With
 
+* [![Tailwind][TailwindCSS]][Tailwind-url]
 * [![Adonis][AdonisJS]][AdonisJS-url]
 * [![Node][Node.js]][Node-url]
 * [![TS][TypeScript]][TypeScript-url]
-* [![Tailwind][TailwindCSS]][Tailwind-url]
+
 
 <p align="right">[<a href="#readme-top">back to top</a>]</p>
-
 
 
 <!-- GETTING STARTED -->
