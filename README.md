@@ -219,7 +219,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->c
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/eRRe-i/edge-template-standalone-boilerplate?style=for-the-badge
 [contributors-url]: https://github.com/eRRe-i/edge-template-standalone-boilerplate/graphs/contributors
 
