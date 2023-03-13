@@ -4,13 +4,17 @@ import { IncomingMessage, createServer } from 'http'
 import url from 'url'
 import { loggedUser, users } from './Users'
 import fs from 'fs'
+import { staticFiles } from './Paths'
 
-edge.mount(join(__dirname, 'views'))
-
+const PRODUCTION = true
 const pathList = [
-    { name: "logged user", path: "/logged-user" }
+    { name: "logged user", path: '/logged-user' + (PRODUCTION ? '.html' : "") }
 
 ]
+
+console.log(pathList[0])
+
+edge.mount(join(__dirname, 'views'))
 
 createServer(async (_req, res) => {
 
@@ -45,13 +49,13 @@ createServer(async (_req, res) => {
             })
         )
     } else if (reqUrl!.match("\.css$")) {
-        let cssPath = join(__dirname, 'public', reqUrl!);
+        let cssPath = join(__dirname, reqUrl!);
         var fileStream = fs.createReadStream(cssPath);
         res.writeHead(200, { "Content-Type": "text/css" });
         fileStream.pipe(res);
 
     } else if (reqUrl!.match("\.jpg$")) {
-        let cssPath = join(__dirname, 'public', reqUrl!);
+        let cssPath = join(__dirname, reqUrl!);
         var fileStream = fs.createReadStream(cssPath);
         res.writeHead(200, { "Content-Type": "image/jpg" });
         fileStream.pipe(res);

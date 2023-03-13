@@ -1,19 +1,21 @@
 import edge from 'edge.js'
 import { join } from 'path'
 import { loggedUser, users } from './Users'
-import { pathList } from './Paths'
+import { paths } from './Paths'
 import fs from 'fs'
 
 edge.mount(join(__dirname, 'views'))
 
-const paths = [
-    { name: "logged user", path: "/logged-user" }
+const PRODUCTION = true
+
+const pathList = [
+    { name: "logged user", path: '/logged-user' + (PRODUCTION ? '.html' : "") }
 
 ]
 
-pathList.map(item => {
+paths.map(item => {
     edge.render(join(item.folder, item.view), {
-        pathList: paths,
+        pathList: pathList,
         loggedUser: loggedUser,
         localhost: "127.0.0.1:3000"
     }).then((data) => {
@@ -25,5 +27,7 @@ pathList.map(item => {
         })
     })
 })
+
+console.log("~~~ build files created ~~~")
 
 

@@ -14,6 +14,6 @@
     "tailwind-install": "npm install -D tailwindcss@3.2.7 && npm install -D @tailwindcss/forms@^0.5.3",
     "tailwind": "npx tailwindcss -i ./src/input.css -o ./public/output.css --watch",
     "nodemon": "nodemon server.ts",
-    "build": "nodemon build.ts"
+    "build": "ts-node ./build.ts && cp -r ./public ./build"
   }
 }

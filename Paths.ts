@@ -4,7 +4,7 @@ interface Path {
     view: string
 }
 
-export const pathList: Path[] = [
+export const paths: Path[] = [
     {
         path: "index.html",
         folder: "base",
@@ -24,5 +24,18 @@ export const pathList: Path[] = [
         path: "logged-user.html",
         folder: "alumni",
         view: "logged-user"
+    }
+]
+
+interface File {
+    name: string
+}
+
+export const staticFiles: File[] = [
+    {
+        name: "leandro.jpg"
+    },
+    {
+        name: "output.css"
     }
 ]
