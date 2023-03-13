@@ -7,6 +7,9 @@ module.exports = {
     "./views/**/*.edge"
   ],
   theme: {
+    fontFamily: {
+      'inter': ['Inter', 'Helvetica', 'sans-serif']
+    },
     extend: {},
   },
   plugins: [require('@tailwindcss/forms'),],
