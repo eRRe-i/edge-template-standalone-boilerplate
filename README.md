@@ -71,12 +71,12 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <!-- <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li> -->
   </ol>
 </details>
 
@@ -113,26 +113,32 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Be sure have node.js and npm intalled in your local machine.
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/eRRe-i/edge-template-standalone-boilerplate.git
    ```
-3. Install NPM packages
+2. Enter the project folder and install NPM packages
    ```sh
+   cd edge-template-standalone-boilerplate/
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+The pages used in the example uses Tailwind CSS. it is not necessary to install anything for the example to load. However if you need to make any changes to the base project, you may need to setup Tailwind. For more information, visit the [Tailwind installation page](https://tailwindcss.com/docs/installation) 
+
+3. Install Tailwind dependencies
+   ```sh
+   npm run tailwind-install
+   ```
+4. Start the Tailwind CLI build process
+   ```sh
+   npm run tailwind
+   ```
+5. Run the modemon script monitor to start the server 
+   ```sh
+   npm run nodemon
    ```
 
 <p align="right">[<a href="#readme-top">back to top</a>]</p>
@@ -140,18 +146,18 @@ This is an example of how to list things you need to use the software and how to
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+<!-- ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p align="right">[<a href="#readme-top">back to top</a>]</p>
+<p align="right">[<a href="#readme-top">back to top</a>]</p> -->
 
 
 
 <!-- ROADMAP -->
-## Roadmap
+<!-- ## Roadmap
 
 - [ ] Feature 1
 - [ ] Feature 2
@@ -160,12 +166,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
-<p align="right">[<a href="#readme-top">back to top</a>]</p>
+<p align="right">[<a href="#readme-top">back to top</a>]</p> -->
 
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+<!-- ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -178,44 +184,42 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">[<a href="#readme-top">back to top</a>]</p>
+<p align="right">[<a href="#readme-top">back to top</a>]</p> -->
 
 
 
 <!-- LICENSE -->
-## License
+<!-- ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">[<a href="#readme-top">back to top</a>]</p>
+<p align="right">[<a href="#readme-top">back to top</a>]</p> -->
 
 
 
 <!-- CONTACT -->
-## Contact
+<!-- ## Contact
 
 Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
 
 Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
 
-<p align="right">[<a href="#readme-top">back to top</a>]</p>
+<p align="right">[<a href="#readme-top">back to top</a>]</p> -->
 
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+<!-- ## Acknowledgments
 
 * []()
 * []()
 * []()
 
-<p align="right">[<a href="#readme-top">back to top</a>]</p>
+<p align="right">[<a href="#readme-top">back to top</a>]</p> -->
 
-eRRe-i
-edge-template-standalone-boilerplate
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->c
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/eRRe-i/edge-template-standalone-boilerplate?style=for-the-badge
 [contributors-url]: https://github.com/eRRe-i/edge-template-standalone-boilerplate/graphs/contributors
 
@@ -244,7 +248,7 @@ edge-template-standalone-boilerplate
 [Node-url]: https://nodejs.org/en/
 [TypeScript]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
 [TypeScript-url]: https://www.typescriptlang.org/
-[Alpine.js]: https://img.shields.io/badge/v1?style=for-the-badge&message=Alpine.js&color=222222&logo=Alpine.js&logoColor=8BC0D0&label=
+[Alpine.js]: https://img.shields.io/static/v1?style=for-the-badge&message=Alpine.js&color=222222&logo=Alpine.js&logoColor=8BC0D0&label=
 [Alpine-url]: https://alpinejs.dev/
 
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
