@@ -35,7 +35,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/edge-js/edge">
-    <img src="public/hellopage.png" alt="hello page" width="523" height="156">
+    <img src="public/hellopage.png" alt="hello page">
   </a>
 
 <h3 align="center">Edge Template Standalone Boilerplate</h3>
