@@ -126,16 +126,16 @@ Be sure have node.js and npm intalled in your local machine.
    cd edge-template-standalone-boilerplate/
    npm install
    ```
-3. The pages used in the example uses Tailwind CSS. it is not necessary to install anything for the example to load. However if you need to make any changes to the base project, you may need to setup Tailwind. For more information visit the ![https://tailwindcss.com/docs/installation] 
+3. The pages used in the example uses Tailwind CSS. it is not necessary to install anything for the example to load. However if you need to make any changes to the base project, you may need to setup Tailwind. For more information, visit the ![Tailwind installation page](https://tailwindcss.com/docs/installation) 
 
-3.1. Install Tailwind dependencies
-   ```sh
-   npm run tailwind-install
-   ```
-3.2. Start the Tailwind CLI build process
-   ```sh
-   npm run tailwind
-   ```
+  1.  Install Tailwind dependencies
+    ```sh
+    npm run tailwind-install
+    ```
+  2.  Start the Tailwind CLI build process
+    ```sh
+    npm run tailwind
+    ```
 4. Run the modemon script monitor to start the server 
    ```sh
    npm run nodemon
@@ -250,7 +250,7 @@ edge-template-standalone-boilerplate
 [Node-url]: https://nodejs.org/en/
 [TypeScript]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
 [TypeScript-url]: https://www.typescriptlang.org/
-[Alpine.js]: https://img.shields.io/badge/v1?style=for-the-badge&message=Alpine.js&color=222222&logo=Alpine.js&logoColor=8BC0D0&label=
+[Alpine.js]: https://img.shields.io/static/v1?style=for-the-badge&message=Alpine.js&color=222222&logo=Alpine.js&logoColor=8BC0D0&label=
 [Alpine-url]: https://alpinejs.dev/
 
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
