@@ -69,15 +69,15 @@
 
         <div x-data="{open: $store.sidebar.open}">
 
-            @include('partials/sidebar')
+            @include('alumni/partials/sidebar')
 
             <div class="CONTENT relative flex flex-col lg:pl-64 mx-2">
 
-                @!component('components/header/topbar', {
+                @!component('alumni/components/header/topbar', {
                 loggedUser : ({...loggedUser})
                 })
 
-                @!component('components/header/profile-card', {
+                @!component('alumni/components/header/profile-card', {
                 loggedUser : ({...loggedUser})
                 })
 

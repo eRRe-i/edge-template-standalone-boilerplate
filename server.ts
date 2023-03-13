@@ -20,7 +20,7 @@ createServer(async (_req, res) => {
     if (reqUrl === "/" || reqUrl === "/welcome") {
         res.writeHead(200, { 'content-type': 'text/html' })
         res.end(
-            await edge.render('welcome', {
+            await edge.render('base/welcome', {
                 pathList: pathList,
                 loggedUser: loggedUser,
                 localhost: "127.0.0.1:3000"
@@ -30,7 +30,7 @@ createServer(async (_req, res) => {
         res.writeHead(200, { 'content-type': 'text/html' })
 
         res.end(
-            await edge.render('welcome', {
+            await edge.render('base/welcome', {
                 pathList: pathList,
                 loggedUser: loggedUser,
                 page: "welcome"
@@ -40,7 +40,7 @@ createServer(async (_req, res) => {
         res.writeHead(200, { 'content-type': 'text/html' })
 
         res.end(
-            await edge.render('logged-user', {
+            await edge.render('alumni/logged-user', {
                 loggedUser: loggedUser,
             })
         )
@@ -59,7 +59,7 @@ createServer(async (_req, res) => {
         res.writeHead(200, { 'content-type': 'text/html' })
 
         res.end(
-            await edge.render('error', {
+            await edge.render('base/error', {
                 pathList: pathList,
                 loggedUser: loggedUser,
                 localhost: "127.0.0.1:3000"
