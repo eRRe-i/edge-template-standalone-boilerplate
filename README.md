@@ -128,14 +128,14 @@ Be sure have node.js and npm intalled in your local machine.
    ```
 3. The pages used in the example uses Tailwind CSS. it is not necessary to install anything for the example to load. However if you need to make any changes to the base project, you may need to setup Tailwind. For more information, visit the [Tailwind installation page](https://tailwindcss.com/docs/installation) 
 
-  1.  Install Tailwind dependencies
-    ```sh
-    npm run tailwind-install
-    ```
-  2.  Start the Tailwind CLI build process
-    ```sh
-    npm run tailwind
-    ```
+  a. Install Tailwind dependencies
+      ```sh
+      npm run tailwind-install
+      ```
+  b. Start the Tailwind CLI build process
+      ```sh
+      npm run tailwind
+      ```
 4. Run the modemon script monitor to start the server 
    ```sh
    npm run nodemon
