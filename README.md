@@ -136,7 +136,7 @@ The pages used in the example uses Tailwind CSS. it is not necessary to install 
    ```sh
    npm run tailwind
    ```
-5. Run the modemon script monitor to start the server 
+5. Run the nodemon script monitor to start the server 
    ```sh
    npm run nodemon
    ```
