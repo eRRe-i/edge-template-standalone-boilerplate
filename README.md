@@ -113,26 +113,32 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Be sure have node.js and npm intalled in your local machine.
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/eRRe-i/edge-template-standalone-boilerplate.git
    ```
-3. Install NPM packages
+2. Enter the project folder and install NPM packages
    ```sh
+   cd edge-template-standalone-boilerplate/
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+3. The pages used in the example uses Tailwind CSS. it is not necessary to install anything for the example to load. However if you need to make any changes to the base project, you may need to setup Tailwind. For more information visit the ![https://tailwindcss.com/docs/installation] 
+
+3.1. Install Tailwind dependencies
+   ```sh
+   npm run tailwind-install
+   ```
+3.2. Start the Tailwind CLI build process
+   ```sh
+   npm run tailwind
+   ```
+4. Run the modemon script monitor to start the server 
+   ```sh
+   npm run nodemon
    ```
 
 <p align="right">[<a href="#readme-top">back to top</a>]</p>
