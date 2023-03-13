@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    {{ inspect(loggedUser) }}
+    @set('time', 'afternoon')
+
+    {{ console.log(loggedUser) }}
+
+    {{ (2 + 2) * 3 }}
+
+    @!component('components/modal', title = 'foo', title = 'bar')
+
+    @!include('partials/button')
+
+</body>
+
+</html>
