@@ -785,10 +785,6 @@ select {
   margin-top: 1.25rem;
 }
 
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
 .block {
   display: block;
 }
@@ -897,20 +893,8 @@ select {
   width: 2rem;
 }
 
-.w-\[35\%\] {
-  width: 35%;
-}
-
-.w-\[65\%\] {
-  width: 65%;
-}
-
 .w-\[70\%\] {
   width: 70%;
-}
-
-.w-\[80\%\] {
-  width: 80%;
 }
 
 .w-auto {
@@ -1297,6 +1281,10 @@ select {
   padding-top: 0.75rem;
 }
 
+.pt-4 {
+  padding-top: 1rem;
+}
+
 .pt-5 {
   padding-top: 1.25rem;
 }
@@ -1307,10 +1295,6 @@ select {
 
 .pt-8 {
   padding-top: 2rem;
-}
-
-.pt-4 {
-  padding-top: 1rem;
 }
 
 .text-center {
