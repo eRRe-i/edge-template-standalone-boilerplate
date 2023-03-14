@@ -47,7 +47,6 @@
     <a href="https://github.com/eRRe-i/edge-template-standalone-boilerplate"><strong>Explore the docs »</strong></a> -->
     <br />
     <br />
-    ·
     <a href="https://github.com/eRRe-i/edge-template-standalone-boilerplate/issues">Report Bug</a>
     ·
     <a href="https://github.com/eRRe-i/edge-template-standalone-boilerplate/issues">Request Feature</a>
