@@ -19,7 +19,7 @@ export const loggedUser: User = {
     city: 'Rio de Janeiro',
     estado: 'RJ',
     isAdmin: true,
-    avatarUrl: './leandro.jpg',
+    avatarUrl: './public/leandro.jpg',
 }
 
 export const users: User[] = [
