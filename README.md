@@ -42,12 +42,11 @@
 
   <p align="center">
     <br>
-    Test and build you own Edge templates in this standalone project!
+    Test and build you own Edge templates in this standalone project! <a href="https://papaya-cactus-a874ad.netlify.app/"><strong>View Demo</strong></a>
     <!-- <br />
     <a href="https://github.com/eRRe-i/edge-template-standalone-boilerplate"><strong>Explore the docs »</strong></a> -->
     <br />
     <br />
-    <a href="https://papaya-cactus-a874ad.netlify.app/"><strong>View Demo</strong</a>
     ·
     <a href="https://github.com/eRRe-i/edge-template-standalone-boilerplate/issues">Report Bug</a>
     ·
