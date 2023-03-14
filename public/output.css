@@ -726,6 +726,10 @@ select {
   z-index: 40;
 }
 
+.m-4 {
+  margin: 1rem;
+}
+
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -785,6 +789,10 @@ select {
   margin-top: 1.25rem;
 }
 
+.-mt-4 {
+  margin-top: -1rem;
+}
+
 .block {
   display: block;
 }
@@ -837,20 +845,16 @@ select {
   height: 2rem;
 }
 
-.h-\[45\%\] {
-  height: 45%;
-}
-
-.h-\[55\%\] {
-  height: 55%;
-}
-
 .h-full {
   height: 100%;
 }
 
 .h-screen {
   height: 100vh;
+}
+
+.min-h-\[50\%\] {
+  min-height: 50%;
 }
 
 .min-h-full {
