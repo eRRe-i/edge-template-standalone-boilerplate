@@ -6,10 +6,9 @@ import fs from 'fs'
 
 edge.mount(join(__dirname, 'views'))
 
-const PRODUCTION = true
-
+const isProduction = (process.env.PRODUCTION === 'true')
 const pathList = [
-    { name: "logged user", path: '/logged-user' + (PRODUCTION ? '.html' : "") }
+    { name: "logged user", path: '/logged-user' + (isProduction ? '.html' : "") }
 
 ]
 

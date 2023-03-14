@@ -6,13 +6,12 @@ import { loggedUser, users } from './Users'
 import fs from 'fs'
 import { staticFiles } from './Paths'
 
-const PRODUCTION = true
+const isProduction = (process.env.PRODUCTION === 'true')
 const pathList = [
-    { name: "logged user", path: '/logged-user' + (PRODUCTION ? '.html' : "") }
-
+    { name: "logged user", path: '/logged-user' + (isProduction ? '.html' : '') }
 ]
 
-console.log(pathList[0])
+console.log('/logged-user' + (process.env.PRODUCTION ? '.html' : ''))
 
 edge.mount(join(__dirname, 'views'))
 
