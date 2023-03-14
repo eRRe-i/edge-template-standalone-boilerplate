@@ -1,74 +1,45 @@
+const express = require("express");
+import { Request, Response } from 'express'
 import edge from 'edge.js'
-import { join } from 'path'
-import { IncomingMessage, createServer } from 'http'
-import url from 'url'
 import { loggedUser, users } from './Users'
-import fs from 'fs'
-import { staticFiles } from './Paths'
+import { join } from 'path'
 
-const isProduction = (process.env.PRODUCTION === 'true')
-const pathList = [
-    { name: "logged user", path: '/logged-user' + (isProduction ? '.html' : '') }
-]
 
-console.log('/logged-user' + (process.env.PRODUCTION ? '.html' : ''))
+const app = express();
+const router = express.Router();
 
 edge.mount(join(__dirname, 'views'))
 
-createServer(async (_req, res) => {
+const isProduction = false
+// (process.env.PRODUCTION === 'true')
+const pathList = [
+    { name: "test-user", path: '/test-user' + (isProduction ? '.html' : '') }
+]
 
-    const reqUrl = url.parse(_req.url!).pathname
+app.use(express.static(join(__dirname, '')))
 
-
-    if (reqUrl === "/" || reqUrl === "/welcome") {
-        res.writeHead(200, { 'content-type': 'text/html' })
-        res.end(
-            await edge.render('base/welcome', {
-                pathList: pathList,
-                loggedUser: loggedUser,
-                localhost: "127.0.0.1:3000"
-            })
-        )
-    } else if (reqUrl === "test") {
-        res.writeHead(200, { 'content-type': 'text/html' })
-
-        res.end(
-            await edge.render('base/welcome', {
-                pathList: pathList,
-                loggedUser: loggedUser,
-                page: "welcome"
-            })
-        )
-    } else if (reqUrl === "/logged-user") {
-        res.writeHead(200, { 'content-type': 'text/html' })
-
-        res.end(
-            await edge.render('alumni/logged-user', {
-                loggedUser: loggedUser,
-            })
-        )
-    } else if (reqUrl!.match("\.css$")) {
-        let cssPath = join(__dirname, reqUrl!);
-        var fileStream = fs.createReadStream(cssPath);
-        res.writeHead(200, { "Content-Type": "text/css" });
-        fileStream.pipe(res);
-
-    } else if (reqUrl!.match("\.jpg$")) {
-        let cssPath = join(__dirname, reqUrl!);
-        var fileStream = fs.createReadStream(cssPath);
-        res.writeHead(200, { "Content-Type": "image/jpg" });
-        fileStream.pipe(res);
-    } else {
-        res.writeHead(200, { 'content-type': 'text/html' })
-
-        res.end(
-            await edge.render('base/error', {
-                pathList: pathList,
-                loggedUser: loggedUser,
-                localhost: "127.0.0.1:3000"
-            })
-        )
-    }
-}).listen(3000, () => {
-    console.log('Listening on 127.0.0.1:3000')
+app.get(['/', '/welcome'], async (req: Request, res: Response) => {
+    const data = await edge.render('base/welcome', {
+        pathList: pathList,
+    })
+    res.send(data)
 })
+app.get('/test-user', async (req: Request, res: Response) => {
+    const data = await edge.render('alumni/test-user', {
+        loggedUser: loggedUser
+    })
+    res.send(data)
+})
+app.get('*', async (req: Request, res: Response) => {
+    const data = await edge.render('base/error', {
+        pathList: pathList,
+    })
+    res.send(data)
+});
+
+
+app.listen(8080, () => {
+    console.log('~~ Listening on port 8080 ~~')
+})
+
+// module.exports.handler = serverless(app)

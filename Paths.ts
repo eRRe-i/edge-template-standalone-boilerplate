@@ -21,9 +21,9 @@ export const paths: Path[] = [
         view: "/error"
     },
     {
-        path: "logged-user.html",
+        path: "test-user.html",
         folder: "alumni",
-        view: "logged-user"
+        view: "test-user"
     }
 ]
 
