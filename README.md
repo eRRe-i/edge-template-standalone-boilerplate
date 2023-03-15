@@ -42,9 +42,7 @@
 
   <p align="center">
     <br>
-    Test and build you own Edge templates in this standalone project! <a href="https://papaya-cactus-a874ad.netlify.app/"><strong>View Demo</strong></a>
-    <!-- <br />
-    <a href="https://github.com/eRRe-i/edge-template-standalone-boilerplate"><strong>Explore the docs »</strong></a> -->
+    Test and build your own Edge templates in this standalone project! <a href="https://bright-mousse-f9a161.netlify.app/"><strong>View Demo</strong></a>
     <br />
     <br />
     <a href="https://github.com/eRRe-i/edge-template-standalone-boilerplate/issues">Report Bug</a>
@@ -139,11 +137,11 @@ It also uses TailwindCSS for some page examples, but it's installation is option
    ```sh
    npm run tailwind
    ```
-2. Run the following to start the server 
+2. Run the following to start the server on Express.js
    ```sh
    npm run server
    ```
-3. Run this if you wish to prep your build for production
+3. Run this if you wish to prep your build for production. The script will create static pages for deploying. This [demo](https://bright-mousse-f9a161.netlify.app/") runs on Netlify.
    ```sh
    npm run build
    ```
