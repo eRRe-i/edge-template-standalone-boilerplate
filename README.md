@@ -141,7 +141,7 @@ It also uses TailwindCSS for some page examples, but it's installation is option
    ```sh
    npm run server
    ```
-3. Run this if you wish to prep your build for production. The script will create static pages for deploying. This [demo](https://bright-mousse-f9a161.netlify.app/") runs on Netlify.
+3. Run this if you wish to create static pages for deploying. This [example](https://bright-mousse-f9a161.netlify.app/) runs on Netlify.
    ```sh
    npm run build
    ```
