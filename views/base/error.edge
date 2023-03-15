@@ -21,13 +21,13 @@
 		<div class="rounded min-w-[70%] gap-2 bg-slate-100 p-3 flex items-center">
 			<div class="text-end">
 				@each(path in pathList)
-				<p class="text-elipsis">{{path.name}}:</p>
+				<p class="text-elipsis">{{path.folder}}:</p>
 				@end
 			</div>
 			<div>
 				@each(path in pathList)
-				<a class="text-blue-800" href="{{ path.path }}">
-					<p class="truncate">{{path.path}}</p>
+				<a class="text-blue-800" href="{{ path.view }}">
+					<p class="truncate">{{path.view}}</p>
 				</a>
 				@end
 			</div>
