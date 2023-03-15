@@ -1,41 +1,30 @@
 interface Path {
-    path: string,
     folder: string,
-    view: string
+    view: string,
+    path?: string,
 }
 
-export const paths: Path[] = [
+export const pathList = [
     {
-        path: "index.html",
-        folder: "base",
-        view: "/welcome"
-    },
-    {
-        path: "welcome.html",
-        folder: "base",
-        view: "/welcome"
-    },
-    {
-        path: "404.html",
-        folder: "base",
-        view: "/error"
-    },
-    {
-        path: "test-user.html",
         folder: "alumni",
-        view: "test-user"
+        view: "/test-user"
     }
 ]
 
-interface File {
-    name: string
-}
-
-export const staticFiles: File[] = [
+export const netlifyBasePathList: Path[] = [
     {
-        name: "leandro.jpg"
+        folder: "base",
+        view: "/welcome",
+        path: "index.html"
     },
     {
-        name: "output.css"
-    }
+        folder: "base",
+        view: "/welcome",
+        path: "welcome.html"
+    },
+    {
+        folder: "base",
+        view: "/error",
+        path: "404.html"
+    },
 ]
