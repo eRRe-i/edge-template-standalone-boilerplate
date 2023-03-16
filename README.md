@@ -41,15 +41,10 @@
 <h3 align="center">Edge Template Standalone Boilerplate</h3>
 
   <p align="center">
-    Edge is the official template for the AdonisJs framework. Although it is build on top of the AdonisJS framework, it is agonstic and can be used standalone as well.
     <br>
-    This is a boilerplate project where you can build you Frontend logic and interactions. You may find it useful to implement and test your templates here before shipping it to the actual project.
-    <!-- <br />
-    <a href="https://github.com/eRRe-i/edge-template-standalone-boilerplate"><strong>Explore the docs »</strong></a> -->
+    Test and build your own Edge templates in this standalone project! <a href="https://bright-mousse-f9a161.netlify.app/"><strong>View Demo</strong></a>
     <br />
     <br />
-    <a href="https://github.com/eRRe-i/edge-template-standalone-boilerplate">View Demo</a>
-    ·
     <a href="https://github.com/eRRe-i/edge-template-standalone-boilerplate/issues">Report Bug</a>
     ·
     <a href="https://github.com/eRRe-i/edge-template-standalone-boilerplate/issues">Request Feature</a>
@@ -71,8 +66,8 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <!-- <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <!-- <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -84,10 +79,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+Edge is the official template for the AdonisJs framework. Although it is build on top of the AdonisJS framework, it is agonstic and can be used standalone as well.
 
-The project was made to support the Frontend development of the UFRRJ's Alumni system. Details about this project can be seen here.
-
-It used the HTTP module to create the server and setup the modules. It also uses TailwindCSS and Alpine 
+The project was made to support the Frontend development of the UFRRJ's Alumni system. Details about this project can be seen ~~here~~.
 
 <p align="right">[<a href="#readme-top">back to top</a>]</p>
 
@@ -113,7 +107,9 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+
 Be sure have node.js and npm intalled in your local machine.
+It also uses TailwindCSS for some page examples, but it's installation is optional.
 
 ### Installation
 
@@ -126,33 +122,33 @@ Be sure have node.js and npm intalled in your local machine.
    cd edge-template-standalone-boilerplate/
    npm install
    ```
-The pages used in the example uses Tailwind CSS. it is not necessary to install anything for the example to load. However if you need to make any changes to the base project, you may need to setup Tailwind. For more information, visit the [Tailwind installation page](https://tailwindcss.com/docs/installation) 
-
-3. Install Tailwind dependencies
+3. If you need to make any changes to the base project or build you own using TailwindCSS, you may need install it. For more information, visit the [Tailwind installation page](https://tailwindcss.com/docs/installation). To install Tailwind dependencies
    ```sh
    npm run tailwind-install
-   ```
-4. Start the Tailwind CLI build process
-   ```sh
-   npm run tailwind
-   ```
-5. Run the nodemon script monitor to start the server 
-   ```sh
-   npm run nodemon
    ```
 
 <p align="right">[<a href="#readme-top">back to top</a>]</p>
 
 
-
 <!-- USAGE EXAMPLES -->
-<!-- ## Usage
+## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+1. Start the Tailwind CLI build process
+   ```sh
+   npm run tailwind
+   ```
+2. Run the following to start the server on Express.js
+   ```sh
+   npm run server
+   ```
+3. Run this if you wish to create static pages for deploying. This [example](https://bright-mousse-f9a161.netlify.app/) runs on Netlify.
+   ```sh
+   npm run build
+   ```
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+More info coming soon...
 
-<p align="right">[<a href="#readme-top">back to top</a>]</p> -->
+<p align="right">[<a href="#readme-top">back to top</a>]</p>
 
 
 
