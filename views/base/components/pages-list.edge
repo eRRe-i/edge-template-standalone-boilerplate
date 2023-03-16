@@ -1,0 +1,19 @@
+<div class="min-h-[50%] sm:w-[45%] sm:h-screen flex flex-col items-center justify-center {{ color }}">
+    <div class="w-[90%] sm:w-[70%] -mt-14 sm:-mt-12 gap-3 flex flex-col">
+        <h2 class="text-lg font-medium text-start text-white">Here is a list of the available pages:</h2>
+        <div class="rounded gap-2 bg-slate-100 p-3 flex items-center">
+            <div class="text-end">
+                @each(path in pathList)
+                <p class="text-elipsis">{{path.folder}}:</p>
+                @end
+            </div>
+            <div class="truncate">
+                @each(path in pathList)
+                <a class="text-blue-800" href="{{ path.view }}">
+                    <p>{{path.view}}</p>
+                </a>
+                @end
+            </div>
+        </div>
+    </div>
+</div>
